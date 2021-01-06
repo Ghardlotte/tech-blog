@@ -1,0 +1,26 @@
+<article>
+    <div>
+        <form id="post-form" class="card">
+            <div class="card-header">
+                <label for="post-title">Title:</label>
+                <input class="form-input" id="post-title" value="{{post.title}}" />
+            </div>
+            <div class="card-body">
+                Text:
+                <textarea class="form-input" id="post-text">
+                    {{post.post_text}}
+                </textarea>
+
+                <button class="btn" id="edit-submit" type="click">Submit Edit</button>
+            </div>
+        </form>
+        <button class="btn" id="delete-submit" type="click">Delete Post</button>
+    </div>   
+</article>
+<br>
+<br>
+
+{{> comments-info post.comments }}
+
+
+<script src="/javascript/edit-delete.js"></script>

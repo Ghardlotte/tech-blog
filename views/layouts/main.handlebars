@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Little Tech</title>
+        <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+    </head>
+
+    <body>
+        <header class="hero">
+
+            <nav>
+                <a href="/dashboard">Dashboard</a>
+                {{#if loggedIn}}
+                <button id="logout" type="button">Logout</button>
+                {{else}}
+                <a href="/login">Login</a>
+                {{/if}}
+            </nav>
+            <br>
+            <h1 class="app-title">
+                <a href="/">Little Tech Blog</a>
+            </h1>
+
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
+        {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
+    </body>
+</html>
